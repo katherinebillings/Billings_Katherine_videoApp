@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'buffalo_nickelregular';
+  src: url('../fonts/buffalo_nickel-webfont.woff2') format('woff2'),
+       url('../fonts/buffalo_nickel-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bubblegum_sansregular';
+  src: url('../fonts/bubblegumsans-regular-webfont.woff2') format('woff2'),
+       url('../fonts/bubblegumsans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header
+{
+  font-family: 'bubblegum_sansregular';
+}
+
+header span
+{
+  font-family: 'bubblegum_sansregular';
+}
+
+header a
+{
+  color: white;
+}
+
+header a:hover
+{
+  color: #4049ff;
+}
+
+.recommended
+{
+    padding-top: 60px;
+}
+
+.tabBox
+{
+  background-color: white;
+}
+
+.tab
+{
+  margin: 0;
+  color: white;
+  font-family: 'buffalo_nickelregular';
+  text-align: center;
+  background-color: blue;
+  padding: 0 0 50px 0;
+  border-radius: 10px;
+  font-size: 2em;
+  width: 33%;
+  height: 60px;
+  z-index: -1;
+}
+
+.tab img
+{
+  width: 20%;
+}
+
+.tab:hover
+{
+  -webkit-filter: brightness(1.15);
+  filter: brightness(1.15);
+  color: white;
+}
+
+.tab.movies
+{
+  background: #ff6b26 url("../images/movies-tab-kid.jpg") no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+
+.tab.tv
+{
+  background: #52cc1f url("../images/television-tab-kid.jpg") no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+
+.tab.music
+{
+  background: #4049ff url("../images/music-tab-kid.jpg") no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+
+.box
+{
+  padding: 40px;
+}
+
+.recommended .box
+{
+  clear: left;
+  margin-top: -40px;
+  background: #ff6b26 url("../images/movies-background-kid.jpg") round;
+  color: black;
+  z-index: 1;
+  background-size: cover;
+}
+
+.recommended .box h3
+{
+  height: 10%;
+  margin-bottom: 0;
+}
+
+.moviesImg
+{
+    border: 3px solid black;
+    max-width: 100%;
+}
+
+.box h3
+{
+  font-family: 'bubblegum_sansregular';
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.movie
+{
+    margin-left: 40px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 20%;
+}
+
+.movie a
+{
+    display: inline-block;
+}
+
+.movie img:hover
+{
+    border: 4px solid gray;
+}

@@ -1,0 +1,74 @@
+<section id="movie">
+  <a href="/" class ="back-button">
+    <i class="far fa-arrow-alt-circle-left"></i>
+  </a>
+
+  <video autoplay>
+  <source src="/video/{{ trailer }}"  type="video/mp4">
+<!-- Put WEBM etc-->
+  </video>
+
+  <article class ="comments" v-if="reviews.length > 0">
+    <div v-for="review in reviews">
+<!-- Will show stars here -->
+      <i class="post-date">${ review.comments_date}</i>
+      <p>
+        ${ review.comments_copy }
+      </p>
+    </div>
+  </article>
+
+  <aside class="add-comment">
+    <h4>Add a review</h4>
+    <span class="hidden movId">{{ movie }}</span>
+    <input type="range" name="myRange" min="0" max="5" step="1" v-model="numStars">
+    <label for="myRange">${ numStars }-Star Review</label>
+    <textarea name="myReview" placeholder="What did you think?" v-model="review"></textarea>
+    <input type="submit" value="Submit your review" v-on:click = "addReview">
+  </aside>
+</section>
+
+<div id="share-buttons">
+    <a href="https://bufferapp.com/add?url=https://rokuflashback.com&amp;text=Roku Flashback" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/buffer.png" alt="Buffer" />
+    </a>
+    <a href="http://www.digg.com/submit?url=https://rokuflashback.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/diggit.png" alt="Digg" />
+    </a>
+    <a href="mailto:?Subject=Roku Flashback&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://rokuflashback.com">
+        <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=https://rokuflashback.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+    </a>
+    <a href="https://plus.google.com/share?url=https://rokuflashback.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+    </a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://rokuflashback.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+    </a>
+    <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+        <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
+    </a>
+    <a href="javascript:;" onclick="window.print()">
+        <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+    </a>
+    <a href="http://reddit.com/submit?url=https://rokuflashback.com&amp;title=Roku Flashback" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+    </a>
+    <a href="http://www.stumbleupon.com/submit?url=https://rokuflashback.com&amp;title=Roku Flashback" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/stumbleupon.png" alt="StumbleUpon" />
+    </a>
+    <a href="http://www.tumblr.com/share/link?url=https://rokuflashback.com&amp;title=Roku Flashback" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" />
+    </a>
+    <a href="https://twitter.com/share?url=https://rokuflashback.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=rokuflashback" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+    </a>
+    <a href="http://vkontakte.ru/share.php?url=https://rokuflashback.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/vk.png" alt="VK" />
+    </a>
+    <a href="http://www.yummly.com/urb/verify?url=https://rokuflashback.com&amp;title=Roku Flashback" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/yummly.png" alt="Yummly" />
+    </a>
+</div>

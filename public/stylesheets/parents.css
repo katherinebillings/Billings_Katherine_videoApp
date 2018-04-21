@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'buffalo_nickelregular';
+    src: url('../fonts/buffalo_nickel-webfont.woff2') format('woff2'),
+         url('../fonts/buffalo_nickel-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+header
+{
+    font-family: 'buffalo_nickelregular';
+}
+
+header a
+{
+  color: white;
+}
+
+header a:hover
+{
+  color: #4049ff;
+}
+
+footer
+{
+    background-color: #4d4d4d;
+    color: white;
+}
+
+.tabBox
+{
+    background-color: white;
+    width: 100%;
+}
+
+.tab
+{
+    margin: 0;
+    color: white;
+    font-family: 'buffalo_nickelregular';
+    text-align: center;
+    background-color: blue;
+    padding: 10px 0 20px 0;
+    border-radius: 10px;
+    font-size: 2em;
+    height: 30px;
+    z-index: -1;
+    margin-right: 0.15%;
+    width: 33%;
+    display: inline-block;
+}
+
+.tab:last-child
+{
+    margin-right: 0;
+}
+
+.tab:hover
+{
+    -webkit-filter: brightness(1.15);
+    filter: brightness(1.15);
+    color: white;
+}
+
+.tab.movies
+{
+    background: #ff6b26 url("../images/movies-tab-adult.jpg") no-repeat;
+    background-size: cover;
+    
+}
+
+.tab.tv
+{
+    background: #52cc1f url("../images/television-tab-adult.jpg") no-repeat;
+    background-size: cover;
+}
+
+.tab.music
+{
+    background: #4049ff url("../images/music-tab-adult.jpg") no-repeat;
+    background-size: cover;
+}
+
+.box
+{
+    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.continue
+{
+    padding-bottom: 30px;
+}
+
+.recommended
+{
+    padding-top: 60px;
+}
+
+.recommended .box
+{
+    clear: left;
+    margin-top: -20px;
+    background: url("../images/movies-background-adult.jpg") round;
+    color: white;
+    z-index: 1;
+    background-size: cover;
+}
+
+.recommended .box h3
+{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.moviesImg
+{
+    border: 3px solid black;
+    max-width: 100%;
+}
+
+.box h3
+{
+    font-family: 'buffalo_nickelregular';
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.movie
+{
+    margin-left: 40px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 20%;
+}
+
+.movie a
+{
+    display: inline-block;
+}
+
+.movie img:hover
+{
+    border: 4px solid gray;
+}

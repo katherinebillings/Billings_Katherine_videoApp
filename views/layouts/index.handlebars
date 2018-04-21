@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }}</title>
+	{{#if mainpage}}
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	{{/if}}
+	{{#if parent}}
+    <link rel="stylesheet" href="stylesheets/parents.css">
+	{{/if}}
+	{{#if kids}}
+		<link rel="stylesheet" href="stylesheets/kids.css">
+	{{/if}}
+	{{#if videopage}}
+		<link rel="stylesheet" href="/stylesheets/style.css">
+	{{/if}}
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+
+</head>
+<body>
+	<header>
+		<a href="/"><img src="/images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span></a>
+		<nav>
+			<ul>
+				{{#if parent}}
+					<li><a href="/kids">Kids</a></li>
+				{{/if}}
+				{{#if kids}}
+					<li><a href="/parent">Parents</a></li>
+				{{/if}}
+				<li><i class="fas fa-user-circle"></i></li>
+				<li><i class="fas fa-cog"></i></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		{{{ body }}}
+	</main>
+
+	<footer>
+		<p class="copy">
+			&copy; 2018 The Awesome Company, Inc
+		</p>
+
+		<ul>
+			<li>
+				<i class="fab fa-facebook"></i>
+			</li>
+			<li>
+				<i class="fab fa-twitter-square"></i>
+			</li>
+			<li>
+				<i class="fab fa-google-plus-square"></i>
+			</li>
+			<li>
+				<i class="fab fa-instagram"></i>
+			</li>
+		</ul>
+	</footer>
+<script>
+
+  var appData = {
+    movies : {{{ data }}} //Grab the Unfiltered Result set
+   }
+</script>
+{{#if mainpage}}
+<script src="/javascripts/main.js"></script>
+{{/if}}
+{{#if videopage}}
+<script src="/javascripts/videopage.js"></script>
+{{/if}}
+{{#if kids}}
+<script src="/javascripts/kids.js"></script>
+{{/if}}
+{{#if parent}}
+<script src="/javascripts/parents.js"></script>
+{{/if}}
+
+</script>
+</body>
+</html>

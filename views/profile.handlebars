@@ -1,0 +1,54 @@
+<div id='app'>
+  <div class="recommended grid-container">
+    <div class="tabBox">
+      {{#if kids}}
+        <a class="tab movies"><img src="../images/movies.svg" alt="Movies"></a>
+        <a class="tv tab"><img src="../images/television.svg" alt="Television"></a>
+        <a class="music tab"><img src="../images/music.svg" alt="Music"></a>
+      {{/if}}
+      {{#if parent}}
+        <a class="tab movies">Movies</a>
+        <a class="tv tab">TV Shows</a>
+        <a class="music tab">Music</a>
+      {{/if}}
+      
+    </div>
+    <div class="box grid-x">
+      <h3 class="small-12 cell">Recommended</h3>
+      {{#each moviesList}}
+        <div class="movie cell">
+          <a href="/movies/{{ movies_id }}/{{ movies_trailer }}">
+          <img class="moviesImg" src="images/{{ movies_cover }}" alt="{{ movies_title }}">
+          </a>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="list grid-container">
+    <section v-for="genre in genres">
+      <div v-if="genre.movies.length > 0">
+        <div class = "box grid-x grid-padding-x">
+          <h3 class = "small-12 cell">${ genre.name }</h3>
+          <div v-for="movie in genre.movies" class="movie cell">
+            <a :href="'/movies/' + movie.movies_id + '/' + movie.movies_trailer">
+            <img class="moviesImg" :src="'/images/' + movie.movies_cover" :alt="movie.movies_title">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="era">
+        <a><img src="images/50s.jpg" alt="50s" class="decade"></a>
+        <a><img src="images/60s.jpg" alt="60s" class="decade"></a>
+        <a><img src="images/70s.jpg" alt="70s" class="decade"></a>
+        <a><img src="images/80s.jpg" alt="80s" class="decade"></a>
+        <a><img src="images/90s.jpg" alt="90s" class="decade"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
